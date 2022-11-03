@@ -1,0 +1,22 @@
+NodeJS 17.2.0
+
+--instalar o expo
+npx create-expo-app mobile
+
+--Depois de criado renomear o arquivo App para extensao tsx.
+--Criar arquivo tsconfig.json e deixar vazio
+--Depois executar 
+npx expo start
+
+--instalar a biblioteca de componentes native-base
+npm install native-base --legacy-peer-deps
+
+--necessario para usar svg no react native
+npx expo install react-native-svg@12.1.1
+
+--garantir que os elementos sejam exibidos na area segura da tela
+npx expo install react-native-safe-area-context@3.3.2
+
+--instalar fontes personalizadas
+npx expo install expo-font @expo-google-fonts/roboto
+
