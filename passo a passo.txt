@@ -13,6 +13,8 @@ npm install native-base --legacy-peer-deps
 
 --necessario para usar svg no react native
 npx expo install react-native-svg@12.1.1
+npm i react-native-svg-transformer
+--repositorio do pacote acima https://github.com/kristerkari/react-native-svg-transformer
 
 --garantir que os elementos sejam exibidos na area segura da tela
 npx expo install react-native-safe-area-context@3.3.2
@@ -20,3 +22,58 @@ npx expo install react-native-safe-area-context@3.3.2
 --instalar fontes personalizadas
 npx expo install expo-font @expo-google-fonts/roboto
 
+--para ter acesso a icones
+https://oblador.github.io/react-native-vector-icons/
+
+
+--para fazer autenticacao oauth, aqui nesse evento fizemos com google
+npx expo install expo-auth-session expo-random
+
+--esse pacote cuida do redirecionamento no momento do login oauth
+npx expo install expo-web-browser
+
+--adicionamos no app.json o atributo "scheme": "NLWCopa" , isso garante que a janela
+--de autenticacao devolva o token para nossa aplicacao
+
+--para criar a navegacao no react native
+npm install @react-navigation/native
+npx expo install react-native-screens react-native-safe-area-context
+
+--para trabalhar com tabs na parte inferior da tela
+npm install @react-navigation/bottom-tabs
+
+--instalar o axios para consumir as apis
+npm i axios
+
+--permite pegar o nome do pais baseado no country code
+npm i country-list
+npm i --save-dev @types/country-list
+
+--para visualizar as bandeiras das selecoes
+npm i --save react-native-country-flag
+
+--pacotes para o react native entender as variaveis de ambiente .env
+npm i dotenv babel-plugin-inline-dotenv
+
+
+--ajustar arquivo babel.config.js para acrescentar essa linha
+plugins: ['inline-dotenv']
+
+exemplo
+
+module.exports = function(api) {
+  api.cache(true);
+  return {
+    presets: ['babel-preset-expo'],
+    plugins: ['inline-dotenv']
+  };
+};
+
+
+--depois de adicionar a variavel de ambiente no authcontext (se necessario)
+-- usar o comando abaixo para reconhecer a variavel no arquivo .env 
+npx expo start --clear
+
+
+--para formatar data
+npm install dayjs
